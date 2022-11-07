@@ -7,6 +7,15 @@ from django.urls import reverse
 from django_object_actions import DjangoObjectActions, takes_instance_or_queryset
 
 from .models import Choice, Poll, Comment, RelatedData
+from django import forms
+
+
+class ResetAllForm(forms.Form):
+    new_value = forms.IntegerField(initial=0)
+
+
+class ChangeVotesForm(forms.Form):
+    change_by = forms.IntegerField(initial=1)
 
 
 class ChoiceAdmin(DjangoObjectActions, admin.ModelAdmin):
@@ -14,6 +23,13 @@ class ChoiceAdmin(DjangoObjectActions, admin.ModelAdmin):
 
     # Actions
     #########
+
+    def change_votes(self, request, obj):
+        change_by = int(request.POST["change_by"])
+        obj.votes += change_by
+        obj.save()
+
+    change_votes.form = ChangeVotesForm
 
     @takes_instance_or_queryset
     def increment_vote(self, request, queryset):
@@ -41,6 +57,13 @@ class ChoiceAdmin(DjangoObjectActions, admin.ModelAdmin):
     def delete_all(self, request, queryset):
         self.message_user(request, "just kidding!")
 
+    def reset_all(self, request, queryset):
+        self.message_user(
+            request, f"resetting all to {request.POST['new_value']}. just kidding!"
+        )
+
+    reset_all.form = ResetAllForm()
+
     def reset_vote(self, request, obj):
         obj.votes = 0
         obj.save()
@@ -57,11 +80,15 @@ class ChoiceAdmin(DjangoObjectActions, admin.ModelAdmin):
     change_actions = (
         "increment_vote",
         "decrement_vote",
+        "change_votes",
         "reset_vote",
         "edit_poll",
         "raise_key_error",
     )
-    changelist_actions = ("delete_all",)
+    changelist_actions = (
+        "delete_all",
+        "reset_all",
+    )
 
 
 admin.site.register(Choice, ChoiceAdmin)
