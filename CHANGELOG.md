@@ -2,6 +2,37 @@
 
 <!--next-version-placeholder-->
 
+## v5.0.0 (2022-12-31)
+### Feature
+* Provide action decorator to pass label, description and atts to the admin method ([#141](https://github.com/Skytek/django-object-actions/issues/141)) ([`5638f99`](https://github.com/Skytek/django-object-actions/commit/5638f999d32ea7f6de60b895d23ce89624120769))
+* Drop Python 3.6 support ([#135](https://github.com/Skytek/django-object-actions/issues/135)) ([`8deebed`](https://github.com/Skytek/django-object-actions/commit/8deebedda55d0e5d466969c7f27a9c60e680e5e8))
+* **ci:** Add manual semantic-release ([#128](https://github.com/Skytek/django-object-actions/issues/128)) ([`f43fd11`](https://github.com/Skytek/django-object-actions/commit/f43fd1199a72be013766d437fe54d875e2fdd53f))
+* Add Python 3.9 & 3.10 support ([`28f0ef7`](https://github.com/Skytek/django-object-actions/commit/28f0ef7dd62eedbdac9d34ad115245ef8d935c4d))
+* **deps:** Add Django 3.1 support ([#109](https://github.com/Skytek/django-object-actions/issues/109)) ([`2c7170e`](https://github.com/Skytek/django-object-actions/commit/2c7170e3a73317a9417733a7ddfe0fabab84fe85))
+* **deps:** Drop Python 3.4 support ([#108](https://github.com/Skytek/django-object-actions/issues/108)) ([`68519d4`](https://github.com/Skytek/django-object-actions/commit/68519d48fa8dd4d3b203981a52157841e5152774))
+* Add Django 3 test support ([#106](https://github.com/Skytek/django-object-actions/issues/106)) ([`4eaf14c`](https://github.com/Skytek/django-object-actions/commit/4eaf14c3caff36d5ab274835d38baef7e66213dc))
+* Drop Python 2 support ([#105](https://github.com/Skytek/django-object-actions/issues/105)) ([`551d2bb`](https://github.com/Skytek/django-object-actions/commit/551d2bb2a66c5fd1c157b05c288032124affba41))
+* Make default labels prettier ([#93](https://github.com/Skytek/django-object-actions/issues/93)) ([`4191afd`](https://github.com/Skytek/django-object-actions/commit/4191afd691d9a70fd6b0de095477067cf3c35691))
+
+### Fix
+* Fix link to ci.yml in README ([#139](https://github.com/Skytek/django-object-actions/issues/139)) ([`700dd9b`](https://github.com/Skytek/django-object-actions/commit/700dd9b848aea67c759dca61cd815a27b6b16fd1))
+* Cleanup Django compatibility shims for <2.0 ([#126](https://github.com/Skytek/django-object-actions/issues/126)) ([`88cfb3b`](https://github.com/Skytek/django-object-actions/commit/88cfb3b2e06b17762639da7f48259eeae343942f))
+* Fix typo in version_variable ([#130](https://github.com/Skytek/django-object-actions/issues/130)) ([`040a802`](https://github.com/Skytek/django-object-actions/commit/040a8029c298d8bb17ffab0b75b9b9ecc3d70de2))
+* Objects with special symbols in primary key 404-ed ([#110](https://github.com/Skytek/django-object-actions/issues/110)) ([`0c90ce1`](https://github.com/Skytek/django-object-actions/commit/0c90ce12a066baf873037eed415052074430d9d2))
+* Changelist action links had no 'href' ([#98](https://github.com/Skytek/django-object-actions/issues/98)) ([`8b8aed3`](https://github.com/Skytek/django-object-actions/commit/8b8aed3b131cf60bc8823c703299f50cf84d9dcc))
+* Make sure not to include pyc files ([`d52f802`](https://github.com/Skytek/django-object-actions/commit/d52f8020024499df7e0bec6f7606707e9045b90b))
+* Actions showed up in /add/, they shouldn't ([`bd23a60`](https://github.com/Skytek/django-object-actions/commit/bd23a6023b3358d6ec0a59b50774d1f5d5d422ed))
+
+### Breaking
+* Python 3.6 is past end-of-life and is no longer supported. Keeping it in `pyproject.toml` was causing pains trying to install packages. Let's drop it while we're dropping support for other old stuff. ([`8deebed`](https://github.com/Skytek/django-object-actions/commit/8deebedda55d0e5d466969c7f27a9c60e680e5e8))
+* drop Python 3.4 support in preparation for adding type hints and Django 3.1 support ([`68519d4`](https://github.com/Skytek/django-object-actions/commit/68519d48fa8dd4d3b203981a52157841e5152774))
+* This release drops Python 2 support ([`551d2bb`](https://github.com/Skytek/django-object-actions/commit/551d2bb2a66c5fd1c157b05c288032124affba41))
+
+### Documentation
+* Add Django@4.0 to CI ([#133](https://github.com/Skytek/django-object-actions/issues/133)) ([`20e2418`](https://github.com/Skytek/django-object-actions/commit/20e2418e6ada4651b3e6d51b5d10c545d8a6c863))
+* Add syntax highlighting ([#102](https://github.com/Skytek/django-object-actions/issues/102)) ([`399affa`](https://github.com/Skytek/django-object-actions/commit/399affa66664a65216c51346e96972eb5ae22499))
+* More tweaks as I read code ([`936fe08`](https://github.com/Skytek/django-object-actions/commit/936fe084054daf90ab2011c337aac02d2701b5a5))
+
 ## v4.1.0 (2022-11-14)
 ### Feature
 * Provide action decorator to pass label, description and atts to the admin method ([#141](https://github.com/crccheck/django-object-actions/issues/141)) ([`5638f99`](https://github.com/crccheck/django-object-actions/commit/5638f999d32ea7f6de60b895d23ce89624120769))
