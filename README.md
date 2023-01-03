@@ -175,6 +175,8 @@ reset_all.form = ResetAllForm()
 
 Each action with form assigned is rendered in it's own, separate row.
 
+Alternatively you can set `form_in_modal=True` property, which will open a form on a separate page. This is recommended for complex forms.
+
 
 ### Programmatically Disabling Actions
 
