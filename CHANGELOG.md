@@ -1,6 +1,10 @@
 # Changelog
 
 <!--next-version-placeholder-->
+
+## v5.1.0 (2023-01-03)
+### Feature
+* **forms:** Modal form ([`4d02172`](https://github.com/Skytek/django-object-actions/commit/4d021720ce5b85dc787c9d7fa088ae6f106fb8dd))
 ### Feature
 * Drop support for GET method. All action are now invoked with POST method.
 * Add option to include inline forms with actions.
