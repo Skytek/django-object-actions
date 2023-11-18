@@ -3,9 +3,9 @@
 
 {% block content %}
 <div id="content-main">
-    <form name="{{ tool.name }}__form" method="post" action="{% add_preserved_filters action_url %}">
+    <form name="{{ tool.name }}__form" method="post" action="{% add_preserved_filters action_url %}" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form.as_table }}
+        {{ form.as_p }}
         <div>
             <input type="submit" value="Submit" name="modal_submit">
             <input type="submit" value="Cancel" name="modal_cancel">
