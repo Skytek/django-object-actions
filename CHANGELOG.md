@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v5.2.0 (2023-11-18)
+
+### Feature
+
+* **forms:** Improve forms - better layout and allow file uplaods ([`15e4292`](https://github.com/Skytek/django-object-actions/commit/15e4292f23ce00f5648741e461202d58d3ff7453))
+
 ## v5.1.0 (2023-01-03)
 ### Feature
 * **forms:** Modal form ([`4d02172`](https://github.com/Skytek/django-object-actions/commit/4d021720ce5b85dc787c9d7fa088ae6f106fb8dd))
