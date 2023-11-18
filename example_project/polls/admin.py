@@ -174,7 +174,6 @@ admin.site.register(Poll, PollAdmin)
 
 
 class CommentAdmin(DjangoObjectActions, admin.ModelAdmin):
-
     # Object actions
     ################
 
@@ -192,7 +191,6 @@ admin.site.register(Comment, CommentAdmin)
 
 
 class RelatedDataAdmin(DjangoObjectActions, admin.ModelAdmin):
-
     # Object actions
     ################
 
