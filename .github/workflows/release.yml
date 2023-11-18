@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
       - name: Python Semantic Release
         # https://github.com/relekang/python-semantic-release/releases
-        uses: relekang/python-semantic-release@v7.32.2
+        uses: relekang/python-semantic-release@v7.34.6
         with:
           github_token: ${{ secrets.GH_API_TOKEN }}
           pypi_token: ${{ secrets.PYPI_API_TOKEN }}
