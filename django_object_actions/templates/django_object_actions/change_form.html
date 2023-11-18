@@ -34,7 +34,7 @@
     {% if tool.has_inline_form %}
         {% url tools_view_name pk=object_id tool=tool.name as action_url %}
         <div class="clear">
-          <form name="{{ tool.name }}__form" method="post" action="{% add_preserved_filters action_url %}">
+          <form name="{{ tool.name }}__form" method="post" action="{% add_preserved_filters action_url %}" enctype="multipart/form-data">
             {% csrf_token %}
             <ul class="object-tools django-object-actions">
               {{ tool.form.as_ul }}
